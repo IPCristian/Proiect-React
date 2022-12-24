@@ -15,6 +15,7 @@ const DynamicReview: FC = () => {
 
     const getReview = async (id: any) => {
 
+        // We retrieve the review with the id provided by the URL
         const review = await (await firebase.firestore().collection('/reviews').doc(id).get()).data();
         console.log(review);
 
@@ -35,7 +36,7 @@ const DynamicReview: FC = () => {
     getReview(useParams().id);
 
   const returnToReview = () => {
-    navigate('/dashboard');
+    navigate('/dashboard'); 
   }
  
 

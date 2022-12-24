@@ -41,8 +41,6 @@ const SubmitPost: FC = () => {
     navigate('/dashboard');
   }
 
-  
-
   return(
     <section className="section">
       <div className="container">

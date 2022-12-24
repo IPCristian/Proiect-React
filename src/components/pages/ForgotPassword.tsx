@@ -30,6 +30,7 @@ const ForgotPassword: FC = () => {
     if(error) {
       dispatch<any>(setError(''));
     }
+    // We enter a state of loading until the reset email is sent succesfully
     setLoading(true);
     await dispatch<any>(sendPasswordResetEmail(email, "Email sent!"));
     setLoading(false);
